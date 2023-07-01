@@ -2,8 +2,24 @@ import React from 'react';
 import { IoArrowForwardOutline } from 'react-icons/io5';
 import Card from '../components/Card/Card';
 import banner from '../img/main-banner.png';
+import { useAppDispatch } from '../redux/store';
+import { fetchItems, selectItems } from '../redux/slices/itemSlice';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
+  const dispatch = useAppDispatch();
+
+  const { items } = useSelector(selectItems);
+
+  React.useEffect(() => {
+    async function fetchData() {
+      window.scrollTo(0, 0);
+      console.log('try');
+      dispatch(fetchItems());
+    }
+    fetchData();
+  }, []);
+
   return (
     <>
       <div className="wrapper">
@@ -18,8 +34,10 @@ const Home = () => {
           </button>
         </div>
 
-        <div>
-          <Card />
+        <div className="items-grid">
+          {items.map((el) => (
+            <Card key={el.id} {...el} />
+          ))}
         </div>
       </div>
     </>

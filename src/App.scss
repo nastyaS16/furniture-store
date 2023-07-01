@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+
 .wrapper {
   width: 100%;
   height: 480px;
@@ -30,6 +32,7 @@ h1 {
   justify-content: center;
   align-items: flex-start;
   gap: 12px;
+  background: var(--100, #f4f4f4);
 
   .heading {
     display: flex;
@@ -53,6 +56,17 @@ h1 {
       letter-spacing: -0.051px;
     }
   }
+  .items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      '. . . .'
+      '. . . .'
+      '. . . .';
+  }
 
   .card {
     display: flex;
@@ -62,6 +76,7 @@ h1 {
     gap: 8px;
 
     .item {
+      position: relative;
       display: flex;
       width: 295px;
       height: 360px;
@@ -70,7 +85,67 @@ h1 {
       justify-content: center;
       align-items: center;
       gap: 8px;
-      background: var(--100, #f4f4f4);
+      background: #fff;
+
+      .icon-favorite {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+
+      img {
+        object-fit: cover;
+        width: 255px;
+        height: 255px;
+      }
+
+      .description {
+        display: flex;
+        padding: 0px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        align-self: stretch;
+
+        h4 {
+          margin: 0;
+          color: var(--black, #0b0b0b);
+
+          /* Caption 1 */
+          font-size: 16px;
+          font-family: Raleway;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 120%;
+        }
+
+        p {
+          margin: 0;
+          color: var(--800, #575757);
+
+          /* Caption 2 */
+          font-size: 14px;
+          font-family: Raleway;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 120%;
+          letter-spacing: 0.01px;
+        }
+
+        h5 {
+          margin: 0;
+          color: var(--black, #0b0b0b);
+
+          /* Callout */
+          font-size: 20px;
+          font-family: Prompt;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 21px;
+          letter-spacing: -0.064px;
+          font-variant-numeric: proportional-nums;
+        }
+      }
     }
 
     button {
@@ -91,6 +166,10 @@ h1 {
       font-weight: 600;
       line-height: 21px;
       letter-spacing: -0.051px;
+      &:hover {
+        cursor: pointer;
+        background: var(--900, #414141);
+      }
     }
   }
 }
