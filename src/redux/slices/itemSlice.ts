@@ -1,19 +1,21 @@
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { RootState } from '../store';
-//import { Sort } from './filterSlice';
+import { Sort } from './filterSlice';
 
 type FetchitemsArgs = {
   categoryId: number;
   search: string;
+  selectedSort: Sort;
   currentPage: number;
 };
 
 export const fetchItems = createAsyncThunk<ItemsState[], FetchitemsArgs>(
   'item/fetchitemsStatus',
   async (params) => {
+    const { search, selectedSort } = params;
     const { data } = await axios.get<ItemsState[]>(
-      `https://641dc760945125fff3d5f129.mockapi.io/favorites`,
+      `https://641dc760945125fff3d5f129.mockapi.io/favorites?${search}&sortBy=${selectedSort.sort}&order=asc`,
     );
     return data;
   },

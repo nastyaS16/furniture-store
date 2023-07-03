@@ -21,5 +21,8 @@
     align-items: flex-start;
     gap: 32px;
     color: #464646;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
