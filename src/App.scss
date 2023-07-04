@@ -221,6 +221,38 @@ h1 {
         background: var(--900, #414141);
       }
     }
+    .three-buttons {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      background-color: #fff;
+    }
+    .button-added {
+      width: 148px;
+    }
+    .button-cart-item {
+      all: unset;
+      width: 48px;
+      height: 48px;
+      color: #313131;
+      border: 1px solid var(--main-color, #464646);
+      box-sizing: border-box;
+      text-align: center;
+      background: var(--900, #fff);
+      cursor: pointer;
+      &:disabled {
+        background: var(--900, #e3e3e3);
+        color: #b4b4b4;
+        border: 1px solid var(--main-color, #e3e3e3);
+      }
+      &:hover {
+        background-color: #fafafa;
+      }
+    }
+    b {
+      width: 24px;
+      text-align: center;
+    }
   }
 }
 .subscribe {
@@ -390,20 +422,6 @@ footer {
       margin: 0;
     }
   }
-  .button-cart-item {
-    all: unset;
-    width: 32px;
-    height: 32px;
-    color: #f4f4f4;
-    border: 1px solid var(--main-color, #464646);
-    text-align: center;
-    background: var(--900, #313131);
-    cursor: pointer;
-    &:disabled {
-      background: var(--900, #b9b9b9);
-      border: none;
-    }
-  }
 
   h5 {
     font-size: 24px;
@@ -454,5 +472,19 @@ footer {
       cursor: pointer;
       background: var(--900, #414141);
     }
+  }
+}
+
+.button-cart-item {
+  all: unset;
+  width: 32px;
+  height: 32px;
+  color: #f4f4f4;
+  text-align: center;
+  background: var(--900, #313131);
+  cursor: pointer;
+  &:disabled {
+    background: var(--900, #b9b9b9);
+    border: none;
   }
 }
