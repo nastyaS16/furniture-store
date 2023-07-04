@@ -8,6 +8,7 @@ import { fetchItems, selectItems } from '../redux/slices/itemSlice';
 import { useSelector } from 'react-redux';
 import { selectFilter, selectSort } from '../redux/slices/filterSlice';
 import Sort from '../components/Sort';
+import Footer from '../components/Footer';
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -55,21 +56,6 @@ const Home = () => {
         </div>
         <img src={subscribe} className="subscribe-image" />
       </div>
-      <footer>
-        <p className="logo">SPACE</p>
-        <li>
-          <h4>Contact us</h4>
-          <ul>Contacts</ul>
-          <ul>Stores</ul>
-          <ul>Message us</ul>
-          <ul>Collaborate with SPACE</ul>
-        </li>
-        <li>
-          <h4>About SPACE</h4>
-          <ul>About company</ul>
-          <ul>Carrier</ul>
-        </li>
-      </footer>
     </>
   );
 };
