@@ -90,6 +90,7 @@ h1 {
       gap: 8px;
       color: #575757;
       cursor: pointer;
+      margin-bottom: 20px;
 
       /* Bold/Callout */
       font-size: 16px;
@@ -486,5 +487,161 @@ footer {
   &:disabled {
     background: var(--900, #b9b9b9);
     border: none;
+  }
+}
+
+.back {
+  button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #575757;
+    cursor: pointer;
+
+    /* Bold/Callout */
+    font-size: 16px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: -0.051px;
+    &:hover {
+      color: #0b0b0b;
+    }
+  }
+}
+
+.full-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .full-img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .full-description {
+    .head {
+      display: flex;
+      justify-content: space-between;
+      .icon-favorite {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    width: 600px;
+    h3 {
+      color: var(--900, #313131);
+
+      /* Bold/H1 */
+      font-size: 28px;
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px;
+      margin: 0;
+    }
+    p {
+      color: var(--900, #313131);
+
+      /* Regular/Body */
+      font-size: 17px;
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: -0.07px;
+      margin: 0;
+    }
+    h2 {
+      color: var(--900, #313131);
+
+      /* user */
+      font-size: 40px;
+      font-family: Prompt;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: -0.88px;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    .desc {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 0;
+      margin-bottom: 12px;
+    }
+    .text {
+      color: var(--800, #575757);
+
+      /* Regular/Body */
+      font-size: 17px;
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: -0.07px;
+      margin-bottom: 20px;
+    }
+    button {
+      all: unset;
+      display: flex;
+      width: 295px;
+      height: 48px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      background: var(--900, #313131);
+      color: var(--white, #fafafa);
+
+      /* Bold/Callout */
+      font-size: 16px;
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 21px;
+      letter-spacing: -0.051px;
+      &:hover {
+        cursor: pointer;
+        background: var(--900, #414141);
+      }
+    }
+    .three-buttons {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .button-added {
+      width: 148px;
+    }
+    .button-cart-item {
+      all: unset;
+      width: 48px;
+      height: 48px;
+      color: #313131;
+      border: 1px solid var(--main-color, #464646);
+      box-sizing: border-box;
+      text-align: center;
+      background: var(--900, #fff);
+      cursor: pointer;
+      &:disabled {
+        background: var(--900, #e3e3e3);
+        color: #b4b4b4;
+        border: 1px solid var(--main-color, #e3e3e3);
+      }
+      &:hover {
+        background-color: #fafafa;
+      }
+    }
+    count {
+      margin-bottom: 0;
+      width: 24px;
+      text-align: center;
+    }
   }
 }

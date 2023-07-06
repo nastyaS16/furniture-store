@@ -15,6 +15,7 @@ import {
   removeFavouriteItem,
   selectFavouriteItemById,
 } from '../../redux/slices/favouriteSlice';
+import { Link } from 'react-router-dom';
 
 const Card = ({ id, title, price, imageUrl, types }) => {
   const cartItem = useSelector(selectCartItemById(id));
@@ -67,7 +68,9 @@ const Card = ({ id, title, price, imageUrl, types }) => {
         ) : (
           <IoHeartOutline size={24} className="icon-favorite" onClick={onClickFavourite} />
         )}
-        <img src={imageUrl} />
+        <Link to={`/item/${id}`}>
+          <img src={imageUrl} />
+        </Link>
         <div className="description">
           <h4>{title}</h4>
           <p>{types}</p>
