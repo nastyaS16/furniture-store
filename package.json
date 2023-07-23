@@ -1,6 +1,7 @@
 {
   "name": "furniture-store",
   "version": "0.1.0",
+  "homepage": "https://nastyas16.github.io/furniture-store/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
@@ -23,6 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -48,6 +51,7 @@
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.7",
-    "@types/react-redux": "^7.1.25"
+    "@types/react-redux": "^7.1.25",
+    "gh-pages": "^5.0.0"
   }
 }
