@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/furniture-store/static/css/main.5cd24c8e.css",
-    "main.js": "/furniture-store/static/js/main.440e6673.js",
+    "main.css": "/furniture-store/static/css/main.a7c04806.css",
+    "main.js": "/furniture-store/static/js/main.528888f7.js",
     "static/media/main-banner.png": "/furniture-store/static/media/main-banner.1e54dd48147eb20c0604.png",
     "static/media/empty-cart.png": "/furniture-store/static/media/empty-cart.c56070d10de84c20009f.png",
     "static/media/1.jpg": "/furniture-store/static/media/1.f48ff0c33d0e161dcd30.jpg",
@@ -9,11 +9,11 @@
     "static/media/subscribtion.png": "/furniture-store/static/media/subscribtion.6ca17a462996d96db3c6.png",
     "static/media/3.jpg": "/furniture-store/static/media/3.ace603c14b99371ca230.jpg",
     "index.html": "/furniture-store/index.html",
-    "main.5cd24c8e.css.map": "/furniture-store/static/css/main.5cd24c8e.css.map",
-    "main.440e6673.js.map": "/furniture-store/static/js/main.440e6673.js.map"
+    "main.a7c04806.css.map": "/furniture-store/static/css/main.a7c04806.css.map",
+    "main.528888f7.js.map": "/furniture-store/static/js/main.528888f7.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cd24c8e.css",
-    "static/js/main.440e6673.js"
+    "static/css/main.a7c04806.css",
+    "static/js/main.528888f7.js"
   ]
 }
