@@ -8,10 +8,7 @@ import CartEmpty from "../components/CartEmpty";
 const Cart = () => {
   const dispath = useDispatch();
   const { totalPrice, items } = useSelector(selectCart);
-  const totalCount = items.reduce(
-    (acc: number, cur: any) => acc + cur.count,
-    0
-  );
+  const totalCount = items.reduce((acc, cur) => acc + cur.count, 0);
 
   const onClickClear = () => {
     dispath(clearItems());
@@ -33,7 +30,7 @@ const Cart = () => {
         </div>
         <div className="cart-items-total">
           <div className="cart-items">
-            {items.map((item: any) => (
+            {items.map((item) => (
               <CartItem key={item.id} {...item} />
             ))}
           </div>

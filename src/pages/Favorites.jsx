@@ -32,7 +32,7 @@ const Favorites = () => {
           </button>
         </div>
         <div className="items-grid">
-          {items.map((item: any) => (
+          {items.map((item) => (
             <Card key={item.id} {...item} />
           ))}
         </div>
